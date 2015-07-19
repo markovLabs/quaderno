@@ -4,14 +4,22 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 
 public class ImageCaptureActivity extends AppCompatActivity {
+    @Bind(R.id.captured_image)
+    ImageView capturedImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_image_capture);
+        ButterKnife.bind(this);
+
     }
 
     @Override
@@ -35,4 +43,6 @@ public class ImageCaptureActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
